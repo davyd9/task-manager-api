@@ -1,24 +1,28 @@
 # Task Manager API
 
-Uma API RESTful desenvolvida em **Java** com o framework **Spring Boot** para gerenciamento de tarefas. Este projeto foi construído para demonstrar a aplicação de arquitetura limpa, boas práticas de Back-end e persistência de dados.
+REST API built with Java and Spring Boot to create, list, update and delete tasks.
 
-## Tecnologias Utilizadas
-* **Linguagem:** Java 17
-* **Framework:** Spring Boot 3
-* **Persistência:** Spring Data JPA / Hibernate
-* **Banco de Dados:** H2 Database (In-Memory)
-* **Gerenciamento de Dependências:** Maven
+## Features
 
-## Arquitetura do Projeto
-O sistema foi estruturado seguindo o padrão de **Layered Architecture** (Arquitetura de Camadas), separando claramente as responsabilidades:
+- CRUD endpoints for tasks
+- Layered structure with controllers, services and repositories
+- Persistence with Spring Data JPA and Hibernate
+- In-memory H2 database for quick local runs
 
-* **Controllers:** Camada responsável por interceptar as requisições HTTP (REST) e retornar as respostas (JSON).
-* **Services:** Camada de isolamento onde ficam as lógicas e regras de negócio da aplicação.
-* **Repositories:** Interfaces de abstração para o acesso a dados (Data Access Object), estendendo o `JpaRepository`.
-* **Models:** Entidades que representam as tabelas do banco de dados, mapeadas via anotações JPA.
+## Tech Stack
 
-## Como executar localmente
+- Java 17
+- Spring Boot 3
+- Spring Data JPA / Hibernate
+- H2 Database
+- Maven
 
-1. Clone este repositório para sua máquina local:
-   ```bash
-   git clone [https://github.com/SEU_USUARIO/task-manager-api.git](https://github.com/SEU_USUARIO/task-manager-api.git)
+## Getting Started
+
+```bash
+git clone https://github.com/davyd9/task-manager-api.git
+cd task-manager-api
+./mvnw spring-boot:run
+```
+
+The API starts on `http://localhost:8080`.
